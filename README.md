@@ -52,7 +52,7 @@ GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I built the website in a single jsx file and then realized it would be much more organized being seperated into components. This segmentation created issues with my API calls which got fixed. In the future, I will implement from seperate files to begin with.
 
 ## License
 
