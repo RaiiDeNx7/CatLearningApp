@@ -21,10 +21,13 @@ export default function App() {
   return (
     <div className="app-container">
       <div className="main-card">
+        {/* LEFT SIDE */}
         <div className="left-panel">
-          <h1>Veni Vici!</h1>
-          <p>Discover cats from your wildest dreams!</p>
-          <p>😺🐱😻🙀😹😼🐈</p>
+          <div className="intro-text">
+            <h1>Veni Vici!</h1>
+            <p>Discover cats from your wildest dreams!</p>
+            <p className="emoji-line">😺🐱😻🙀😹😼🐈</p>
+          </div>
 
           {error && <p className="error-text">{error}</p>}
           {loading && <p>Loading cat...</p>}
@@ -32,11 +35,13 @@ export default function App() {
           <CatCard cat={cat} loading={loading} error={error} />
 
           {cat && (
-            <AttributeList
-              cat={cat}
-              banList={banList}
-              toggleBan={handleBan}
-            />
+            <div className="attributes-wrapper">
+              <AttributeList
+                cat={cat}
+                banList={banList}
+                toggleBan={handleBan}
+              />
+            </div>
           )}
 
           <button className="discover-btn" onClick={fetchCat}>
@@ -44,12 +49,16 @@ export default function App() {
           </button>
         </div>
 
+        {/* RIGHT SIDE */}
         <div className="right-panel">
           <h2>Ban List</h2>
-          <p>Select an attribute to ban it</p>
-          <BanList banList={banList} removeBan={(b) =>
-            setBanList((prev) => prev.filter((x) => x !== b))
-          } />
+          <p className="ban-instruction">Select an attribute to ban it</p>
+          <BanList
+            banList={banList}
+            removeBan={(b) =>
+              setBanList((prev) => prev.filter((x) => x !== b))
+            }
+          />
         </div>
       </div>
     </div>

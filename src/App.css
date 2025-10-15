@@ -4,17 +4,16 @@
   padding: 2rem;
   text-align: center;
 }
+
 .card {
   padding: 2em;
 }
-
 
 button {
   cursor: pointer;
 }
 
-/* App.css */
-
+/* General App Styling */
 body, html {
   margin: 0;
   padding: 0;
@@ -30,6 +29,7 @@ body, html {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 /* Two-panel layout */
@@ -50,7 +50,9 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 /* Right panel for ban list */
@@ -62,6 +64,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  overflow-y: auto;
 }
 
 /* Titles */
@@ -77,24 +80,27 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Buttons for cat traits */
+/* Attribute buttons container */
 .attr-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   margin: 20px 0;
+  max-width: 90%;
 }
 
+/* Individual attribute buttons */
 .attr-buttons button {
   background-color: #d9b15f;
   color: black;
-  padding: 10px 20px;
+  padding: 10px 18px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .attr-buttons button:hover {
@@ -121,9 +127,21 @@ img {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: auto; /* keeps it pinned near bottom */
 }
 
 .discover-btn:hover {
   background-color: #4a4a4a;
 }
 
+/* Scrollbar styling (optional, for sleek look) */
+.left-panel::-webkit-scrollbar,
+.right-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.left-panel::-webkit-scrollbar-thumb,
+.right-panel::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 10px;
+}

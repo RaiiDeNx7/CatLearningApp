@@ -1,19 +1,22 @@
 export default function BanList({ banList, removeBan }) {
   return (
-    <div className="flex gap-3 items-center mb-4 flex-wrap">
-      <div className="text-sm text-gray-700">Ban list:</div>
+    <div className="ban-list">
+      <div className="text-sm text-gray-300 mb-2">Ban list:</div>
       {banList.length === 0 ? (
-        <div className="text-xs text-gray-400">(none)</div>
+        <div className="text-xs text-gray-500">(none)</div>
       ) : (
-        banList.map((b) => (
-          <button
-            key={b}
-            onClick={() => removeBan(b)}
-            className="px-2 py-1 text-xs border rounded-full bg-red-50 border-red-200"
-          >
-            {b}
-          </button>
-        ))
+        <div className="flex flex-wrap gap-2 justify-center">
+          {banList.map((b) => (
+            <button
+              key={b}
+              onClick={() => removeBan(b)}
+              className="px-3 py-1 text-xs font-semibold rounded-full bg-[#d9b15f] text-black hover:bg-[#eac875] transition"
+              title="Click to remove from ban list"
+            >
+              {b}
+            </button>
+          ))}
+        </div>
       )}
     </div>
   );
