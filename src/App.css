@@ -1,0 +1,129 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.card {
+  padding: 2em;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1a1a1a;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+/* Centers the main card */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Two-panel layout */
+.main-card {
+  display: flex;
+  width: 1000px;
+  height: 600px;
+  background-color: rgba(30, 30, 30, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Left panel content area */
+.left-panel {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right panel for ban list */
+.right-panel {
+  width: 280px;
+  background-color: rgba(50, 50, 50, 0.95);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Titles */
+h1 {
+  font-size: 3rem;
+  color: #d9b15f;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #d9b15f;
+  margin-bottom: 10px;
+}
+
+/* Buttons for cat traits */
+.attr-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.attr-buttons button {
+  background-color: #d9b15f;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.attr-buttons button:hover {
+  background-color: #eac875;
+}
+
+/* Cat image */
+img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 15px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* Discover button */
+.discover-btn {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 12px 30px;
+  border: 1px solid #666;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.discover-btn:hover {
+  background-color: #4a4a4a;
+}
+
